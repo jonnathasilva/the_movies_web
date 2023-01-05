@@ -23,7 +23,7 @@ export const Henader = () => {
       </nav>
 
       <form className="hidden items-center sm:flex">
-        <label for="simple-search" className="sr-only">
+        <label htmlFor="simple-search" className="sr-only">
           Busca
         </label>
 
