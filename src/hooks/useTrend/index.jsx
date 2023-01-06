@@ -1,10 +1,10 @@
 import { useQuery } from "react-query";
 import axios from "axios";
 
-const movies = async () => {
+const trend = async () => {
   const { data } = await axios({
-    baseURL: import.meta.env.VITE_MOVIES,
-    url: "/popular",
+    baseURL: import.meta.env.VITE_TREND,
+    url: "/day",
     params: {
       language: "pt-BR",
     },
@@ -14,6 +14,6 @@ const movies = async () => {
   return data;
 };
 
-export const usePopular = () => {
-  return useQuery(["popular"], movies);
+export const useTrend = () => {
+  return useQuery(["trend"], trend);
 };

@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 export const Henader = () => {
   return (
-    <header className="px-2 flex justify-between items-center py-5 lg:px-4">
+    <header className="flex justify-between items-center py-5">
       <div className="flex items-center sm:space-x-3">
         <RiMovie2Line color="#FFF" size={30} className="hidden sm:block" />
 
