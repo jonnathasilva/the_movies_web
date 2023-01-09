@@ -46,7 +46,7 @@ export const ListMovies = ({ data, title, isLoading }) => {
                 />
 
                 <p className="text-white text-center whitespace-nowrap truncate">
-                  {item.title}
+                  {item.title ? item.title : item.name}
                 </p>
               </div>
             ))}
