@@ -35,10 +35,13 @@ export const ListMovies = ({ data, title, isLoading }) => {
         ) : (
           <div
             ref={carousel}
-            className="flex space-x-5 overflow-x-scroll scroll scroll-smooth scrollbar-hide"
+            className="flex space-x-2 overflow-x-scroll scroll scroll-smooth scrollbar-hide"
           >
             {data?.results.map((item) => (
-              <div className="flex-none w-52 overflow-hidden" key={item.title}>
+              <div
+                className="flex-none w-52 cursor-pointer scale-95 hover:scale-105 ease-in duration-75"
+                key={item.title}
+              >
                 <img
                   src={`${import.meta.env.VITE_IMG}/w200${item.poster_path}`}
                   alt={item.title}
@@ -54,21 +57,19 @@ export const ListMovies = ({ data, title, isLoading }) => {
         )}
       </div>
 
-      <div className="absolute top-2/4 flex justify-between w-full">
-        <button
-          onClick={handleftClink}
-          className="bg-[#ffffffbf] rounded-full w-10 h-10 flex justify-center items-center hover:bg-white"
-        >
-          <AiOutlineLeft size={30} />
-        </button>
+      <button
+        onClick={handleftClink}
+        className="bg-[#ffffffbf] rounded-full w-10 h-10 flex justify-center items-center hover:bg-white absolute top-2/4 left-0"
+      >
+        <AiOutlineLeft size={30} />
+      </button>
 
-        <button
-          onClick={handrightClink}
-          className="bg-[#ffffffbf] rounded-full w-10 h-10 flex justify-center items-center hover:bg-white"
-        >
-          <AiOutlineRight size={30} />
-        </button>
-      </div>
+      <button
+        onClick={handrightClink}
+        className="bg-[#ffffffbf] rounded-full w-10 h-10 flex justify-center items-center hover:bg-white absolute top-2/4 right-0"
+      >
+        <AiOutlineRight size={30} />
+      </button>
     </div>
   );
 };

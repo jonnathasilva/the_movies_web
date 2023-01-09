@@ -32,7 +32,10 @@ export const App = () => {
 
           <div className="space-y-4 h-full overflow-auto scrollbar-width pb-10">
             {comingSoon.data?.results.map((movie) => (
-              <div className="flex w-full h-24 space-x-4" key={movie.title}>
+              <div
+                className="flex w-full h-24 space-x-4 cursor-pointer scale-95 hover:scale-105 ease-in duration-75"
+                key={movie.title}
+              >
                 <div className="w-16 h-full ">
                   <img
                     src={`${import.meta.env.VITE_IMG}/w200${movie.poster_path}`}
