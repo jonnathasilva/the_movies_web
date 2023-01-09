@@ -30,7 +30,7 @@ export const App = () => {
         <aside className="w-72 h-[750px] overflow-hidden hidden lg:block">
           <h2 className="text-white text-lg font-semibold">Em Breve</h2>
 
-          <div className="space-y-4 h-full overflow-auto pb-10">
+          <div className="space-y-4 h-full overflow-auto scrollbar-width pb-10">
             {comingSoon.data?.results.map((movie) => (
               <div className="flex w-full h-24 space-x-4" key={movie.title}>
                 <div className="w-16 h-full ">
